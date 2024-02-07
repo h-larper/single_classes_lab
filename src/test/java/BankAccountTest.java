@@ -56,7 +56,7 @@ public class BankAccountTest {
         assertThat(result).isEqualTo("010185");
     }
 
-    
+
     @Test
     public void canGetAccountNumber() {
         BankAccount bankAccount = new BankAccount("Howard", "Moon", "010175", 2000);
@@ -71,5 +71,21 @@ public class BankAccountTest {
         int result = bankAccount.getAccountNumber();
         assertThat(result).isEqualTo(4000);
     }
+
+    @Test
+    public void canGetBalance() {
+        BankAccount bankAccount = new BankAccount("Howard", "Moon", "010175", 2000);
+        int result = bankAccount.getBalance();
+        assertThat(result).isEqualTo(0);
+    }
+
+    @Test
+    public void canSetBalance() {
+        BankAccount bankAccount = new BankAccount("Howard", "Moon", "010175", 2000);
+        bankAccount.setBalance(100);
+        int result = bankAccount.getBalance();
+        assertThat(result).isEqualTo(100);
+    }
+
 
 }
