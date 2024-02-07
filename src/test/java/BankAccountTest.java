@@ -2,9 +2,8 @@ import org.junit.jupiter.api.Test;
 
 public class BankAccountTest {
 
-    public BankAccount bankAccount;
+    private BankAccount bankAccount;            //declaring variable bankAccount
 
-    @Test
-    public void
+    
 
 }
