@@ -17,6 +17,13 @@ public class BankAccountTest {
         assertThat(result).isEqualTo(50);
     }
 
+    @Test
+    public void canWithdraw() {
+        BankAccount bankAccount = new BankAccount("Howard", "Moon", "010175", 2000);
+        bankAccount.withdrawal(10);
+        int result = bankAccount.getBalance();
+        assertThat(result).isEqualTo(-10);
+    }
 
 //    Testing Getters & Setters:
 

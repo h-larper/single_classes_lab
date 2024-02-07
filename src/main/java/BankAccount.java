@@ -21,6 +21,9 @@ public class BankAccount {
         balance += amount;
     }
 
+    public void withdrawal(int amount) {
+        balance -= amount;
+    }
 
 //    GETTERS & SETTERS:
 
