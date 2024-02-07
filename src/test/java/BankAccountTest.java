@@ -7,6 +7,15 @@ public class BankAccountTest {
 
     private BankAccount bankAccount;            //declaring variable bankAccount
 
+// Testing main methods:
+
+    @Test
+    public void canAddDeposit() {
+        BankAccount bankAccount = new BankAccount("Howard", "Moon", "010175", 2000);
+        bankAccount.deposit(50);
+        int result = bankAccount.getBalance();
+        assertThat(result).isEqualTo(50);
+    }
 
 
 //    Testing Getters & Setters:

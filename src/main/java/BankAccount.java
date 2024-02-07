@@ -15,6 +15,11 @@ public class BankAccount {
         this.balance = 0;
     }
 
+//    MAIN METHODS:
+
+    public void deposit(int amount) {           // not int as not wanting a return, put void
+        balance += amount;
+    }
 
 
 //    GETTERS & SETTERS:
