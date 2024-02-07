@@ -25,6 +25,11 @@ public class BankAccount {
         balance -= amount;
     }
 
+    public void interest() {
+        balance = (int) (balance + balance * 0.1);            // no longer an integer as there is a decimal place, is a double/float
+//        balance += (int) (balance * 0.1);         alternative way of typing
+    }
+
 //    GETTERS & SETTERS:
 
 

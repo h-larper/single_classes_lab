@@ -25,6 +25,15 @@ public class BankAccountTest {
         assertThat(result).isEqualTo(-10);
     }
 
+    @Test
+    public void canAddInterest() {
+        BankAccount bankAccount = new BankAccount("Howard", "Moon", "010175", 2000);
+        bankAccount.setBalance(10);
+        bankAccount.interest();                         // has to go AFTER setting balance or will return 10 not 11 as expected
+        int result = bankAccount.getBalance();
+        assertThat(result).isEqualTo(11);
+    }
+
 //    Testing Getters & Setters:
 
     @Test
