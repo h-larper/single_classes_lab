@@ -5,14 +5,16 @@ public class BankAccount {
     private String dateOfBirth;
     private int accountNumber;
     private int balance;
+    private String accountType;
 
 
-    public BankAccount(String inputFirstName, String inputLastName, String inputDateOfBirth, int inputAccountNumber) {               //Creating constructor function (?)
+    public BankAccount(String inputFirstName, String inputLastName, String inputDateOfBirth, int inputAccountNumber, String inputAccountType) {               //Creating constructor function (?)
         this.firstName = inputFirstName;
         this.lastName = inputLastName;
         this.dateOfBirth = inputDateOfBirth;
         this.accountNumber = inputAccountNumber;
         this.balance = 0;
+        this.accountType = inputAccountType;
     }
 
 //    MAIN METHODS:
@@ -26,9 +28,14 @@ public class BankAccount {
     }
 
     public void interest() {
-        balance = (int) (balance + balance * 0.1);            // no longer an integer as there is a decimal place, is a double/float
-//        balance += (int) (balance * 0.1);         alternative way of typing
+        if(accountType == "Current Account") {
+            balance = (int) (balance + balance * 0.1);}            // no longer an integer as there is a decimal place, is a double/float
+//                                                              balance += (int) (balance * 0.1);         alternative way of typing
+        if(accountType == "Savings Account") {
+            balance = (int) (balance + balance * 0.2);
+        }
     }
+
 
 //    GETTERS & SETTERS:
 
