@@ -42,6 +42,22 @@ public class BankAccountTest {
     }
 
     @Test
+    public void canGetDateOfBirth() {
+        BankAccount bankAccount = new BankAccount("Howard", "Moon", "010175", 2000);
+        String result = bankAccount.getDateOfBirth();
+        assertThat(result).isEqualTo("010175");
+    }
+
+    @Test
+    public void canSetDateOfBirth() {
+        BankAccount bankAccount = new BankAccount("Howard", "Moon", "010175", 2000);
+        bankAccount.setDateOfBirth("010185");
+        String result = bankAccount.getDateOfBirth();
+        assertThat(result).isEqualTo("010185");
+    }
+
+    
+    @Test
     public void canGetAccountNumber() {
         BankAccount bankAccount = new BankAccount("Howard", "Moon", "010175", 2000);
         int result = bankAccount.getAccountNumber();
